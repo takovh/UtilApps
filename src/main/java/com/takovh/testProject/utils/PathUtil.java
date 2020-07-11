@@ -1,10 +1,10 @@
 package com.takovh.testProject.utils;
 
-public class Util {
+public class PathUtil {
     public static String getResourceFilePath(String path){
         String p = null;
         try {
-            p = Util.class.getResource(path).getPath();
+            p = PathUtil.class.getResource(path).getPath();
         } catch (Exception e) {
             e.printStackTrace();
         }
