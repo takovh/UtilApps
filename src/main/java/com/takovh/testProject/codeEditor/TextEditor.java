@@ -30,7 +30,7 @@ public class TextEditor {
      * 初始化输出文件，若已存在则删除文件并重新创建
      * @param filePath 需要初始化的文件
      */
-    private File initOutputFile(String filePath) {
+    private File initFile(String filePath) {
 //        System.out.println("文件" + file.getName() + "是否存在：" + file.exists());
         File file = new File(filePath);
         Boolean flag = null;
@@ -51,12 +51,8 @@ public class TextEditor {
      * 将filePaths中的代码整合到outputFilePath中
      */
     public void collectCode2File(String basePath, String outputPath){
-        if(null == basePath){
-            System.out.println("程序未执行，请先设置basePath！");
-            return;
-        }
         getFileList(new File(basePath));
-        File outputFile = initOutputFile(outputPath);
+        File outputFile = initFile(outputPath);
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter(outputFile));
@@ -95,7 +91,7 @@ public class TextEditor {
     public void deleteDesignatedLines(File file, String...regexs){
         int i = 0;
         String tempPath = file.getAbsolutePath() + ".temp";
-        File tempFile = initOutputFile(tempPath);
+        File tempFile = initFile(tempPath);
         BufferedWriter writer = null;
         BufferedReader reader = null;
         try {
@@ -166,7 +162,7 @@ public class TextEditor {
         boolean flag = false;
         int i = 0;
         String tempPath = file.getAbsolutePath() + ".temp";
-        File tempFile = initOutputFile(tempPath);
+        File tempFile = initFile(tempPath);
         BufferedWriter writer = null;
         BufferedReader reader = null;
         try {
@@ -188,6 +184,8 @@ public class TextEditor {
                 if(tempString.matches(regex1)){
                     i++;
                     flag = true;
+                    // 若在本行就发现注释结束标志，说明是单行注释
+                    if (tempString.matches(regex2)) flag = false;
                     continue;
                 }
                 // 2.2.2未发现多行注释

@@ -1,11 +1,5 @@
 package com.takovh.testProject.codeEditor;
 
-import com.takovh.testProject.utils.FileUtil;
-
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 将代码整合到同一个文件内
  * 删除注释与空行
