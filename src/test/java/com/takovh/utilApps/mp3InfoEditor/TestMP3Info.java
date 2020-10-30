@@ -1,6 +1,6 @@
-package com.takovh.testProject.mp3InfoEditor;
+package com.takovh.utilApps.mp3InfoEditor;
 
-import com.takovh.testProject.utils.PathUtil;
+import com.takovh.utilApps.utils.PathUtil;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package com.takovh.testProject.myOCR;
+package com.takovh.utilApps.myOCR;
 
 import com.baidu.aip.ocr.AipOcr;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.takovh.testProject.utils;
+package com.takovh.utilApps.utils;
 
 import java.io.Closeable;
 import java.io.IOException;

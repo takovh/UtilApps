@@ -1,4 +1,4 @@
-package com.takovh.testProject.utils;
+package com.takovh.utilApps.utils;
 
 public class PathUtil {
     public static String getResourceFilePath(String path){

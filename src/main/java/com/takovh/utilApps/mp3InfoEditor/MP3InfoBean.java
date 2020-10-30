@@ -1,4 +1,4 @@
-package com.takovh.testProject.mp3InfoEditor;
+package com.takovh.utilApps.mp3InfoEditor;
 
 public class MP3InfoBean {
     private String songName;

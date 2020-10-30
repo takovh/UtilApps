@@ -1,4 +1,4 @@
-package com.takovh.testProject.myOCR;
+package com.takovh.utilApps.myOCR;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

@@ -1,4 +1,4 @@
-package com.takovh.testProject.mp3InfoEditor;
+package com.takovh.utilApps.mp3InfoEditor;
 
 import java.io.File;
 import java.io.IOException;

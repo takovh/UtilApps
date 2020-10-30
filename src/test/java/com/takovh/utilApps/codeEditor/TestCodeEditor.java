@@ -1,4 +1,4 @@
-package com.takovh.testProject.codeEditor;
+package com.takovh.utilApps.codeEditor;
 
 import java.io.FileNotFoundException;
 
